@@ -9,6 +9,7 @@ const app = express();
 // Calling like an API to the express backend server, convert into json
 app.use(express.json());
 
+app.use(express.static("public"))
 //set up stripe
 
 // this would be the API access key
