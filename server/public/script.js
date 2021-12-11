@@ -16,10 +16,21 @@ button.addEventListener("click",()=>{
         })
           
     }).then(res=>{
+        // Check good response
         if (res.ok) return res.json()
+        // If response is bad 
+        console.log("help")
 
-        // This is for the json response
+        return res.json().then(json => Promise.reject(json))
+
+        // This is for the json response, which would return a URL 
     }).then(({url}) => {
+        console.log(url);
         window.location = url
+        //The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+
+
+    }).catch(e =>{
+        console.log(e.error)
     })
 })
