@@ -11,6 +11,7 @@ app.use(express.json());
 
 app.use(express.static("public"))
 //set up stripe
+// asdasdaoskdoakdaskdasdasdas
 
 // this would be the API access key
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
